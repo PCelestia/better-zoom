@@ -3,6 +3,7 @@
    "version": "0.1.0",
    "description": "A custom client made because Zoom's client is kinda bad in my opinion",
    "main": "build/index.js",
+   "private": true,
    "scripts": {
       "test": "echo im lazy lol",
       "build": "tsc",
