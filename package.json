@@ -2,12 +2,14 @@
    "name": "better-zoom",
    "version": "0.1.0",
    "description": "A custom client made because Zoom's client is kinda bad in my opinion",
-   "main": "build/index.js",
+   "main": "build/scripts/index.js",
    "private": true,
    "scripts": {
       "preinstall": "npx only-allow pnpm",
+      "start": "electron .",
+      "build": "gulp build",
       "test": "echo im lazy lol",
-      "build": "tsc",
+      "buildandstart": "npm run build && npm run start",
       "lint": "eslint --ext .ts src/",
       "docs": "typedoc --out docs src"
    },
@@ -31,7 +33,7 @@
       "@typescript-eslint/eslint-plugin": "^4.4.0",
       "@typescript-eslint/parser": "^4.4.0",
       "del": "^6.0.0",
-      "electron": "^10.1.3",
+      "electron": "~10.1.3",
       "eslint": "^7.11.0",
       "gulp": "^4.0.2",
       "gulp-if": "^3.0.0",
@@ -43,6 +45,6 @@
       "pug": "^3.0.0",
       "ts-node": "^9.0.0",
       "typedoc": "^0.19.2",
-      "typescript": "^4.0.3"
+      "typescript": "~4.0.3"
    }
 }
