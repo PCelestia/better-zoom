@@ -2,7 +2,7 @@
    "compilerOptions": {
       "outDir": "build",
       "removeComments": true,
-      "lib": ["esnext"],
+      "lib": ["esnext", "DOM", "DOM.Iterable"],
       "esModuleInterop": true,
       "module": "commonjs",
       "moduleResolution": "node",
@@ -16,7 +16,7 @@
       "strictPropertyInitialization": true,
       "target": "ES2020"
    },
-   "include": ["src/**/*"],
+   "include": ["src/ts/**/*"],
    "typeAcquisition": {
       "enable": true
    }
