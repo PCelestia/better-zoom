@@ -28,7 +28,7 @@ jobs:
           npm -v
           pnpm -v
 
-      - name: clean install dependencies
+      - name: install dependencies
         run: pnpm i
 
       - name: build typescript
