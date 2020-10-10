@@ -6,7 +6,7 @@ import gulpif from "gulp-if";
 
 import pug from "gulp-pug";
 import sass from "gulp-sass";
-import sasscompiler from "sass";
+import sasscompiler from "node-sass";
 import typescript from "gulp-typescript";
 import { init as initsourcemaps, write as writesourcemaps } from "gulp-sourcemaps";
 
