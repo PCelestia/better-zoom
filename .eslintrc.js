@@ -25,7 +25,7 @@ module.exports = {
          jsx: false
       },
       tsconfigRootDir: __dirname,
-      project: "./tsconfig-shut-up-eslint.json"
+      project: "./tsconfig.json"
    },
    extends: "plugin:@typescript-eslint/recommended",
    env: {
