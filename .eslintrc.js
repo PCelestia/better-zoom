@@ -445,7 +445,11 @@ module.exports = {
       "@typescript-eslint/restrict-template-expressions": warn,
       "@typescript-eslint/return-await": off,
       "@typescript-eslint/semi": error,
-      "@typescript-eslint/space-before-function-paren": [error, never],
+      "@typescript-eslint/space-before-function-paren": [error, {
+         anonymous: never,
+         named: never,
+         asyncArrow: always
+      }],
       "@typescript-eslint/strict-boolean-expressions": error,
       "@typescript-eslint/switch-exhaustiveness-check": error,
       "@typescript-eslint/triple-slash-reference": [error, {

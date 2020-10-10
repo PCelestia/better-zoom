@@ -1,6 +1,14 @@
-import { task, src, dest } from "gulp";
+// hehe shush eslint
 
-task("nothing", (done) => {
-   console.log("h");
-   done();
+import { task, src, dest } from "gulp";
+import del from "del";
+import typescript from "gulp-typescript";
+
+task("clean", async () => {
+   return del("build");
+});
+
+task("typescript", async () => {
+   const { compilerOptions: compileropts } = require("./tsconfig.json");
+   return src("src/**/*.ts").pipe(typescript(compileropts)).pipe(dest("build"));
 });
