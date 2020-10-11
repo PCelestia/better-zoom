@@ -260,7 +260,7 @@ module.exports = {
          // noodle
          format: null,
          custom: {
-            regex: noodle,
+            regex: "^[a-zA-Z0-9]{1,}$",
             match: true
          },
          leadingUnderscore: "forbid",

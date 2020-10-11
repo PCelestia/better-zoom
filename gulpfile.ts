@@ -17,18 +17,27 @@ task("clean", () => {
 });
 
 task("pug", () => {
-   return src("src/pug/pages/**/*.pug").pipe(pug()).pipe(dest("build/pages"));
+   return src("src/pug/pages/**/*.pug")
+          .pipe(pug())
+          .pipe(dest("build/pages"));
 });
 
 (sass as any).compiler = sasscompiler;
 task("sass", () => {
-   return src("src/sass/**/*.scss").pipe(sass()).pipe(dest("build/styles"));
+   return src("src/sass/**/*.scss")
+          .pipe(sass())
+          .pipe(dest("build/styles"));
 });
 
 task("typescript", () => {
    const { compilerOptions: compileropts } = require("./tsconfig.json");
    if (production) delete compileropts.sourceMap;
-   return src("src/ts/**/*.ts").pipe(gulpif(production, initsourcemaps())).pipe(typescript(compileropts)).pipe(gulpif(production, writesourcemaps())).pipe(dest("build/scripts"));
+
+   return src("src/ts/**/*.ts")
+          .pipe(gulpif(production, initsourcemaps()))
+          .pipe(typescript(compileropts))
+          .pipe(gulpif(production, writesourcemaps()))
+          .pipe(dest("build/scripts"));
 });
 
 
